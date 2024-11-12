@@ -58,6 +58,8 @@ decorator==5.1.1
     # via ipython
 defusedxml==0.7.1
     # via nbconvert
+dgl==2.4.0+cu121
+    # via pytorch-graph-template
 distlib==0.3.9
     # via virtualenv
 docker-pycreds==0.4.0
@@ -188,6 +190,7 @@ nbformat==5.10.4
 nest-asyncio==1.6.0
     # via ipykernel
 networkx==3.2.1
+    # via dgl
     # via torch
 nodeenv==1.9.1
     # via pre-commit
@@ -197,6 +200,9 @@ notebook-shim==0.2.4
     # via jupyterlab
     # via notebook
 numpy==1.26.3
+    # via dgl
+    # via pandas
+    # via scipy
     # via torchvision
 nvidia-cublas-cu12==12.1.3.1
     # via nvidia-cudnn-cu12
@@ -232,12 +238,15 @@ nvitop==1.3.2
 overrides==7.7.0
     # via jupyter-server
 packaging==24.1
+    # via dgl
     # via ipykernel
     # via jupyter-server
     # via jupyterlab
     # via jupyterlab-server
     # via nbconvert
     # via pytest
+pandas==2.2.3
+    # via dgl
 pandocfilters==1.5.1
     # via nbconvert
 parso==0.8.4
@@ -261,6 +270,7 @@ prompt-toolkit==3.0.48
 protobuf==5.28.3
     # via wandb
 psutil==6.1.0
+    # via dgl
     # via ipykernel
     # via nvitop
     # via wandb
@@ -272,12 +282,13 @@ pure-eval==0.2.3
 pycparser==2.22
     # via cffi
 pydantic==2.9.2
+    # via dgl
     # via pydantic-settings
-    # via pytorch-template
+    # via pytorch-graph-template
 pydantic-core==2.23.4
     # via pydantic
 pydantic-settings==2.6.1
-    # via pytorch-template
+    # via pytorch-graph-template
 pygments==2.18.0
     # via ipython
     # via jupyter-console
@@ -288,12 +299,16 @@ pytest-asyncio==0.24.0
 python-dateutil==2.9.0.post0
     # via arrow
     # via jupyter-client
+    # via pandas
 python-dotenv==1.0.1
     # via pydantic-settings
-    # via pytorch-template
+    # via pytorch-graph-template
 python-json-logger==2.0.7
     # via jupyter-events
+pytz==2024.2
+    # via pandas
 pyyaml==6.0.2
+    # via dgl
     # via jupyter-events
     # via pre-commit
     # via wandb
@@ -307,6 +322,7 @@ referencing==0.35.1
     # via jsonschema-specifications
     # via jupyter-events
 requests==2.28.1
+    # via dgl
     # via jupyterlab-server
     # via wandb
 rfc3339-validator==0.1.4
@@ -319,6 +335,8 @@ rpds-py==0.21.0
     # via jsonschema
     # via referencing
 ruff==0.7.2
+scipy==1.14.1
+    # via dgl
 send2trash==1.8.3
     # via jupyter-server
 sentry-sdk==2.18.0
@@ -354,13 +372,14 @@ tomli==2.0.2
     # via jupyterlab
     # via pytest
 torch==2.3.0+cu121
-    # via pytorch-template
+    # via dgl
+    # via pytorch-graph-template
     # via torchaudio
     # via torchvision
 torchaudio==2.3.0+cu121
-    # via pytorch-template
+    # via pytorch-graph-template
 torchvision==0.18.0+cu121
-    # via pytorch-template
+    # via pytorch-graph-template
 tornado==6.4.1
     # via ipykernel
     # via jupyter-client
@@ -368,6 +387,8 @@ tornado==6.4.1
     # via jupyterlab
     # via notebook
     # via terminado
+tqdm==4.66.5
+    # via dgl
 traitlets==5.14.3
     # via comm
     # via ipykernel
@@ -395,6 +416,8 @@ typing-extensions==4.9.0
     # via pydantic-core
     # via torch
     # via wandb
+tzdata==2024.2
+    # via pandas
 uri-template==1.3.0
     # via jsonschema
 urllib3==1.26.13
@@ -403,7 +426,7 @@ urllib3==1.26.13
 virtualenv==20.27.1
     # via pre-commit
 wandb==0.18.6
-    # via pytorch-template
+    # via pytorch-graph-template
 wcwidth==0.2.13
     # via prompt-toolkit
 webcolors==24.8.0

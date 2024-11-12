@@ -6,6 +6,7 @@ dependencies = [
     "torch==2.3.0+cu121",
     "torchaudio==2.3.0+cu121",
     "torchvision==0.18.0+cu121",
+    "dgl==2.4.0+cu121",
     "pydantic>=2.9.2",
     "python-dotenv>=1.0.1",
     "pydantic-settings>=2.6.1",
@@ -33,6 +34,11 @@ dev-dependencies = [
 name = "torch"
 url = "https://download.pytorch.org/whl/cu121"
 type = "index"
+
+[[tool.rye.sources]]
+name = "dgl"
+url = "https://data.dgl.ai/wheels/torch-2.3/cu121/repo.html"
+type = "find-links"
 
 [tool.hatch.metadata]
 allow-direct-references = true

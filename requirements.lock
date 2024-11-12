@@ -19,6 +19,8 @@ charset-normalizer==2.1.1
     # via requests
 click==8.1.7
     # via wandb
+dgl==2.4.0+cu121
+    # via pytorch-graph-template
 docker-pycreds==0.4.0
     # via wandb
 filelock==3.13.1
@@ -39,8 +41,12 @@ markupsafe==2.1.5
 mpmath==1.3.0
     # via sympy
 networkx==3.2.1
+    # via dgl
     # via torch
 numpy==1.26.3
+    # via dgl
+    # via pandas
+    # via scipy
     # via torchvision
 nvidia-cublas-cu12==12.1.3.1
     # via nvidia-cudnn-cu12
@@ -70,6 +76,10 @@ nvidia-nvjitlink-cu12==12.1.105
     # via nvidia-cusparse-cu12
 nvidia-nvtx-cu12==12.1.105
     # via torch
+packaging==24.1
+    # via dgl
+pandas==2.2.3
+    # via dgl
 pillow==10.2.0
     # via torchvision
 platformdirs==4.3.6
@@ -77,21 +87,31 @@ platformdirs==4.3.6
 protobuf==5.28.3
     # via wandb
 psutil==6.1.0
+    # via dgl
     # via wandb
 pydantic==2.9.2
+    # via dgl
     # via pydantic-settings
-    # via pytorch-template
+    # via pytorch-graph-template
 pydantic-core==2.23.4
     # via pydantic
 pydantic-settings==2.6.1
-    # via pytorch-template
+    # via pytorch-graph-template
+python-dateutil==2.9.0.post0
+    # via pandas
 python-dotenv==1.0.1
     # via pydantic-settings
-    # via pytorch-template
+    # via pytorch-graph-template
+pytz==2024.2
+    # via pandas
 pyyaml==6.0.2
+    # via dgl
     # via wandb
 requests==2.28.1
+    # via dgl
     # via wandb
+scipy==1.14.1
+    # via dgl
 sentry-sdk==2.18.0
     # via wandb
 setproctitle==1.3.3
@@ -100,18 +120,22 @@ setuptools==70.0.0
     # via wandb
 six==1.16.0
     # via docker-pycreds
+    # via python-dateutil
 smmap==5.0.1
     # via gitdb
 sympy==1.13.1
     # via torch
 torch==2.3.0+cu121
-    # via pytorch-template
+    # via dgl
+    # via pytorch-graph-template
     # via torchaudio
     # via torchvision
 torchaudio==2.3.0+cu121
-    # via pytorch-template
+    # via pytorch-graph-template
 torchvision==0.18.0+cu121
-    # via pytorch-template
+    # via pytorch-graph-template
+tqdm==4.66.5
+    # via dgl
 triton==2.3.0
     # via torch
 typing-extensions==4.9.0
@@ -119,8 +143,10 @@ typing-extensions==4.9.0
     # via pydantic-core
     # via torch
     # via wandb
+tzdata==2024.2
+    # via pandas
 urllib3==1.26.13
     # via requests
     # via sentry-sdk
 wandb==0.18.6
-    # via pytorch-template
+    # via pytorch-graph-template
