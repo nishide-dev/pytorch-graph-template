@@ -2,6 +2,7 @@
 import dgl
 import torch
 import torch.version as torch_version
+import torch_geometric
 
 # internal imports
 
@@ -13,6 +14,8 @@ def main() -> None:
     print("-" * 120)  # noqa: T201
 
     print(f"DGL version: {dgl.__version__}")  # noqa: T201
+    print(f"Torch Geometric version: {torch_geometric.__version__}")  # noqa: T201
+    print("-" * 120)  # noqa: T201
 
 
 if __name__ == "__main__":

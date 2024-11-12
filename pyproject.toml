@@ -11,6 +11,13 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "pydantic-settings>=2.6.1",
     "wandb>=0.18.6",
+    "torch-geometric>=2.5.3",
+    "torch-scatter==2.1.2+pt23cu121",
+    "torch-sparse==0.6.18+pt23cu121",
+    "torch-cluster==1.6.3+pt23cu121",
+    "torch-spline-conv==1.2.2+pt23cu121",
+    "pyg-lib==0.4.0+pt23cu121",
+    "tqdm>=4.64.1",
 ]
 readme = "README.md"
 requires-python = ">= 3.10"
@@ -38,6 +45,11 @@ type = "index"
 [[tool.rye.sources]]
 name = "dgl"
 url = "https://data.dgl.ai/wheels/torch-2.3/cu121/repo.html"
+type = "find-links"
+
+[[tool.rye.sources]]
+name = "pyg-lib"
+url = "https://data.pyg.org/whl/torch-2.3.0+cu121.html"
 type = "find-links"
 
 [tool.hatch.metadata]
